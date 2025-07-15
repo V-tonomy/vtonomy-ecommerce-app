@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 import path from "path";
 
 const nextConfig: NextConfig = {
-  serverExternalPackages: ['tsyringe'],
+  serverExternalPackages: ["tsyringe"],
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.resolve.fallback = {
@@ -22,8 +22,6 @@ const nextConfig: NextConfig = {
       "@assets": path.resolve(__dirname, "./src/assets"),
       "@tests": path.resolve(__dirname, "./src/tests"),
     };
-
-    
 
     return config;
   },
