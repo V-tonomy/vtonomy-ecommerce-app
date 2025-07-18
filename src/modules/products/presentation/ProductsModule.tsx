@@ -1,5 +1,3 @@
 export const ProductsModule = () => {
-    return (
-        <div>Products Module</div>
-    )
-}
+  return <div>Products Module</div>;
+};

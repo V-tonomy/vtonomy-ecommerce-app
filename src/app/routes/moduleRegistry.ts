@@ -1,35 +1,35 @@
-import { injectable } from "tsyringe"
+import { injectable } from "tsyringe";
 
 interface ModuleRoute {
-    path: string
-    label: string
-    icon?: string
-    component?: string
-    children?: string
+  path: string;
+  label: string;
+  icon?: string;
+  component?: string;
+  children?: string;
 }
 
 interface Module {
-    name: string
-    routes: ModuleRoute[]
+  name: string;
+  routes: ModuleRoute[];
 }
 
 @injectable()
 export class ModuleRegistry {
-    private modules: Map<string, Module> = new Map();
+  private modules: Map<string, Module> = new Map();
 
-    register(module: Module) {
-        this.modules.set(module.name, module)
-    }
+  register(module: Module) {
+    this.modules.set(module.name, module);
+  }
 
-    getAllRoutes(): ModuleRoute[] {
-        const routes: ModuleRoute[] = [];
-        this.modules.forEach(module => {
-            routes.push(...module.routes);
-        });
-        return routes;
-    }
+  getAllRoutes(): ModuleRoute[] {
+    const routes: ModuleRoute[] = [];
+    this.modules.forEach((module) => {
+      routes.push(...module.routes);
+    });
+    return routes;
+  }
 
-    getModuleRoutes(moduleName: string) {
-        return this.modules.get(moduleName)?.routes || []
-    }
+  getModuleRoutes(moduleName: string) {
+    return this.modules.get(moduleName)?.routes || [];
+  }
 }
