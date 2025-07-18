@@ -5,7 +5,7 @@ import { Metadata } from "next";
 import "./globals.css";
 import React, { JSX } from "react";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["vietnamese"] });
 
 export const metadata: Metadata = {
   title: "Vtonomy Ecommerce",
