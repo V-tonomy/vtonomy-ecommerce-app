@@ -1,19 +1,32 @@
-'use client'
-import { AppBar, Badge, Box, Button, IconButton, Menu, MenuItem, Toolbar, Typography } from "@mui/material"
+"use client";
 import {
-    AccountCircle,
-    Menu as MenuIcon,
-    Search as SearchIcon,
-    ShoppingCart,
-} from "@mui/icons-material"
-import { Search, SearchIconWrapper } from "@/modules/products/presentation/components/Search"
-import { StyledInputBase } from "@/modules/products/presentation/components/StyledInputBase"
+  AppBar,
+  Badge,
+  Box,
+  Button,
+  IconButton,
+  Menu,
+  MenuItem,
+  Toolbar,
+  Typography,
+} from "@mui/material";
+import {
+  AccountCircle,
+  Menu as MenuIcon,
+  Search as SearchIcon,
+  ShoppingCart,
+} from "@mui/icons-material";
+import {
+  Search,
+  SearchIconWrapper,
+} from "@/modules/products/presentation/components/Search";
+import { StyledInputBase } from "@/modules/products/presentation/components/StyledInputBase";
 
 export const VtonomyAppBar = () => {
-    return (
+  return (
     <section>
-        {/* Navigation Bar */}
-        <AppBar
+      {/* Navigation Bar */}
+      <AppBar
         position="sticky"
         sx={{ backgroundColor: "#7B68EE", boxShadow: 3 }}
       >
@@ -89,8 +102,6 @@ export const VtonomyAppBar = () => {
           </Box>
         </Toolbar>
       </AppBar>
-        </section>
-    )
-    
-    
-}
+    </section>
+  );
+};

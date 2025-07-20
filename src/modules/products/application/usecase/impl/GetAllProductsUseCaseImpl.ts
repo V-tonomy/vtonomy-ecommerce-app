@@ -4,8 +4,11 @@ import * as ProductRepository from "../../repository/ProductRepository";
 
 @injectable()
 export class GetAllProductsUseCase implements GetAllProductsUseCase {
-    constructor(@inject(ProductRepository.TYPES.ProductRepository) private productRepository: ProductRepository.ProductRepository){}
-    async execute(): Promise<Product[]> {
-        return await this.productRepository.findAll()
-    }
+  constructor(
+    @inject(ProductRepository.TYPES.ProductRepository)
+    private productRepository: ProductRepository.ProductRepository,
+  ) {}
+  async execute(): Promise<Product[]> {
+    return await this.productRepository.findAll();
+  }
 }

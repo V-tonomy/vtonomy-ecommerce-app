@@ -1,3 +1,3 @@
 export interface UseCaseNoParam<T> {
-    execute(): Promise<T>
+  execute(): Promise<T>;
 }

@@ -2,9 +2,9 @@ import { useUseCaseNoParam } from "@/modules/shared/presentation/hooks/useUseCas
 import { GetAllProductsUseCase } from "../../application/usecase/impl/GetAllProductsUseCaseImpl";
 
 export function useProductUseCases() {
-    const getAllProducts = useUseCaseNoParam(GetAllProductsUseCase);
+  const getAllProducts = useUseCaseNoParam(GetAllProductsUseCase);
 
-    return {
-        getAllProducts
-    };
+  return {
+    getAllProducts,
+  };
 }

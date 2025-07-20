@@ -1,3 +1,3 @@
 export interface UseCase<T> {
-    execute(): Promise<T>
+  execute(): Promise<T>;
 }

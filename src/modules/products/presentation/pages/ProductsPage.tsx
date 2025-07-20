@@ -1,5 +1,5 @@
-'use client'
-import "reflect-metadata"
+"use client";
+import "reflect-metadata";
 import React, { useEffect, useState } from "react";
 import {
   Typography,
@@ -40,10 +40,10 @@ export const ProductsPage = () => {
 
   // Mock product data
   useEffect(() => {
-    getAllProducts.execute()
-  }, [])
+    getAllProducts.execute();
+  }, []);
 
-  const products = getAllProducts.data || []
+  const products = getAllProducts.data || [];
 
   const categories = [
     "Electronics",
@@ -55,7 +55,6 @@ export const ProductsPage = () => {
     "Health & Beauty",
     "Automotive",
   ];
-
 
   const sidebarContent = (
     <Box sx={{ width: 250, p: 2 }}>
@@ -189,7 +188,6 @@ export const ProductsPage = () => {
 
   return (
     <Box sx={{ flexGrow: 1, backgroundColor: "#f5f5f5", minHeight: "100vh" }}>
-
       {/* Mobile Drawer */}
       <Drawer
         anchor="left"
@@ -221,14 +219,20 @@ export const ProductsPage = () => {
         {/* Products Grid */}
         <Container maxWidth="xl" sx={{ py: 4, px: { xs: 2, sm: 3 } }}>
           <Grid container spacing={3}>
-            {
-              (products instanceof Array) ?
-              products.map((product) => (
-                <GridLegacy item xs={12} sm={6} md={4} lg={3} key={product.id}>
+            {products instanceof Array
+              ? products.map((product) => (
+                  <GridLegacy
+                    item
+                    xs={12}
+                    sm={6}
+                    md={4}
+                    lg={3}
+                    key={product.id}
+                  >
                     <VtonomyProductCard product={product} />
-                </GridLegacy>
-              )): false
-            }
+                  </GridLegacy>
+                ))
+              : false}
           </Grid>
         </Container>
       </Box>

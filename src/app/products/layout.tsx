@@ -1,9 +1,9 @@
-import { ProductsModule } from "@/modules/products/presentation/ProductsModule"
+import { ProductsModule } from "@/modules/products/presentation/ProductsModule";
 
 export default function ProductsLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
-  return ProductsModule().Layout({children})
+  return ProductsModule().Layout({ children });
 }
