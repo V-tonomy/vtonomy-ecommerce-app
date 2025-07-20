@@ -1,7 +1,8 @@
-"use client";
 
 import { ProductsModule } from "@/modules/products/presentation/ProductsModule";
 
-export const ProductModuleEntry = ProductsModule;
+export const ProductsPage = () => {
+    return ProductsModule().Page()
+}
 
-export default ProductModuleEntry;
+export default ProductsPage;
